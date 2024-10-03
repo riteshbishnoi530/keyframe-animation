@@ -1,0 +1,53 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	min-height: 300vh;
+	margin: 0;
+	background: linear-gradient(to bottom, #2d2a82, lightblue);
+	background-size: 100% 300vh;
+}
+
+.fighter-jet {
+	position: fixed;
+  fill:darkgray;
+	top: 48px;
+	left: 48px;
+	width: 100px;
+	height: auto;
+	z-index: 1;
+	offset-path: path('M.5 122.7s24.7-275 276.9 0c327.1 356.7 266.1-330.3 548-33.3 256.9 270.7 271.1 0 271.1 0');
+	animation: move auto linear;
+	animation-timeline: scroll(root);
+}
+
+.cloud {
+	width: 230px;
+	height: auto;
+	position: absolute;
+	top: 54px;
+	left: 1000px;
+	fill: rgb(255 255 255 / 0.5);
+}
+
+.cloud:nth-child(2n) {
+	top: 1080px;
+	left: 300px;
+}
+
+.cloud:nth-child(3n) {
+	top: 1200px;
+	left: 700px;
+}
+
+@keyframes move {
+	0% {
+		offset-distance: 0%;
+	}
+	100% {
+		offset-distance: 100%;
+	}
+}
+
